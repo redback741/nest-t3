@@ -1,7 +1,9 @@
+import { CheckLists } from "@/components/CheckLists";
 import CreateListModal from "@/components/CreateListModal";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { currentUser } from "@clerk/nextjs/server";
+import { Check } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -37,6 +39,9 @@ export default function HomePage() {
     <main className="flex w-full flex-col items-center">
       <Suspense fallback={<WelcomeFallback />}>
         <Welcome />
+      </Suspense>
+      <Suspense fallback={<WelcomeFallback />}>
+        <CheckLists />
       </Suspense>
     </main>
   );

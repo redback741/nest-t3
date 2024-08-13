@@ -9,6 +9,7 @@ import zhCNlocales from "@/locales/zh.json"
 import merge from "lodash.merge"
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/Header";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -41,6 +42,7 @@ export default function RootLayout({
               </SignedIn>
             </header> */}
             <div className="flex  w-full items-center">{children}</div>
+            <Toaster/>
           </ThemeProvider>
           
         </body>
